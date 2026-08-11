@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker | Joshua Tobi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        input,
+        select {
+            background: #334155;
+            color: white;
+        }
+
+        button {
+            background: #22c55e;
+            color: #052e16;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        .total {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .expense {
+            background: #334155;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .expense strong {
+            color: #22c55e;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 Expense Tracker</h1>
+
+    <p class="subtitle">
+        Track your spending and manage your money with a simple Python web application.
+    </p>
+
+    <div class="card">
+
+        <h2>Add Expense</h2>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Expense name"
+                required
+            >
+
+            <input
+                type="number"
+                name="amount"
+                placeholder="Amount (₦)"
+                step="0.01"
+                required
+            >
+
+            <select name="category" required>
+                <option value="">Choose category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Business">Business</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">
+                ➕ Add Expense
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Total Expenses</h2>
+
+        <div class="total">
+            ₦{{ "%.2f"|format(total) }}
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📋 Expense History</h2>
+
+        {% if expenses %}
+
+            {% for expense in expenses %}
+
+                <div class="expense">
+
+                    <strong>{{ expense.name }}</strong>
+
+                    <br>
+
+                    ₦{{ "%.2f"|format(expense.amount) }}
+
+                    <br>
+
+                    Category: {{ expense.category }}
+
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>No expenses recorded yet.</p>
+
+        {% endif %}
+
+    </div>
+
+    <a class="back" href="/">
+        ← Back to Portfolio
+    </a>
+
+</div>
+
+</body>
+</html>
