@@ -3,35 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Python Portfolio</title>
+
+    <title>Joshua Tobi | Python & AI Developer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #111827, #1e293b);
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 19px;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 6px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #22c55e;
+        }
+
+        .about {
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 10px 16px;
+            border-radius: 20px;
+            border: 1px solid #334155;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .project p {
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>🚀 My Python Portfolio</h1>
+<header>
+    <h1>👋 Hi, I'm Joshua Tobi</h1>
 
     <p>
-        Welcome! I am learning Python, APIs, databases,
-        web development, and AI Engineering.
+        Python Developer, AI Engineering Learner and aspiring
+        software engineer building practical solutions with Python,
+        web development, APIs and artificial intelligence.
     </p>
 
-    <h2>🐍 My Projects</h2>
+    <div class="buttons">
+        <a class="btn" href="https://github.com/TobijoshuA613" target="_blank">
+            GitHub
+        </a>
 
-    <ul>
-        <li>Expense Tracker</li>
-        <li>Currency Converter</li>
-        <li>Country Information API</li>
-        <li>Student Database</li>
-        <li>Contact Book</li>
-        <li>API + Database Application</li>
-    </ul>
+        <a class="btn" href="#projects">
+            View Projects
+        </a>
+    </div>
+</header>
 
+
+<section>
+    <h2>👨‍💻 About Me</h2>
+
+    <p class="about">
+        I am learning Python and building real-world projects to
+        strengthen my skills in software development, web applications,
+        APIs, databases and AI engineering.
+
+        My goal is to become an AI Engineer and build technology that
+        solves practical problems.
+    </p>
+</section>
+
+
+<section>
+    <h2>🛠️ Skills</h2>
+
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Flask</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Databases</div>
+        <div class="skill">AI Engineering</div>
+    </div>
+</section>
+
+
+<section id="projects">
+    <h2>🚀 Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>💰 Expense Tracker</h3>
+            <p>
+                A Python application designed to help users track
+                income and expenses.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>💱 Currency Converter</h3>
+            <p>
+                A Python project that demonstrates API integration
+                and currency conversion.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🌍 Country Information API</h3>
+            <p>
+                A project exploring APIs and displaying useful
+                information about countries.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🎓 Student Database</h3>
+            <p>
+                A Python database project for storing and managing
+                student information.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>📱 Contact Book</h3>
+            <p>
+                A Python application for managing contacts and
+                practicing CRUD operations.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🤖 AI Projects</h3>
+            <p>
+                Future projects focused on artificial intelligence,
+                automation and real-world problem solving.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section>
     <h2>🎯 My Goal</h2>
 
-    <p>
-        To become an AI Engineer and build useful technology
-        that solves real-world problems.
+    <p class="about">
+        My long-term goal is to become an AI Engineer and build
+        intelligent software applications that solve real-world
+        problems and create opportunities for people.
     </p>
+</section>
+
+
+<section>
+    <h2>📫 Contact</h2>
+
+    <p class="about">
+        GitHub:
+        <a href="https://github.com/TobijoshuA613"
+           target="_blank"
+           style="color:#22c55e;">
+            github.com/TobijoshuA613
+        </a>
+    </p>
+</section>
+
+
+<footer>
+    © 2026 Joshua Tobi — Python & AI Developer
+</footer>
 
 </body>
 </html>
