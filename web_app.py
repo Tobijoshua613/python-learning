@@ -1,13 +1,30 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
+import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
-
-@app.route("/")
-def home():
-    return render_template("index.html")
+DATABASE = "expenses.db"
 
 
+def get_db():
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def init_db():
+    conn = get_db()
+
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS expenses (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            amount REAL NOT NULL,
+            category TEXT NOT NULL
+        )
+    """)
+
+    conn.commit()
+    conn.close()
 expenses = []
 
 
